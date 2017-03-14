@@ -30,14 +30,14 @@ var all=[];
 window.addEventListener("load", function(){
     addButton.addEventListener("click", function(event){
     event.preventDefault();
-    var patient = new PatientData(inputName.value, inputLastName.value, inputAge.value, inputGender.value, inputCity.value, inputCountry.value);
-    patient.file();
-
     var allPatient = document.createElement("div")
     var pData     = document.createElement("p")
 
     allPatient.appendChild(pData);
-    pData.appendChild(allPatient);
+    record.appendChild(allPatient);
+
+    var patient = new PatientData(inputName.value, inputLastName.value, inputAge.value, inputGender.value, inputCity.value, inputCountry.value);
+    patient.file();
 
     all.push(patient);
     });
