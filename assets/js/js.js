@@ -1,13 +1,13 @@
 
 function PatientData (name,lastname,age,gender,city,country){
-  this.name     =name;
-  this.lastname =lastname;
-  this.age      =age;
-  this.gender   =gender;
-  this.city     =city;
-  this.country  =country;
-  this.file    = function(){
-  record.innerHTML= "Nombre: " + this.name +"\n" + this.lastname + "<br>"+
+  this.name     = name;
+  this.lastname = lastname;
+  this.age      = age;
+  this.gender   = gender;
+  this.city     = city;
+  this.country  = country;
+  this.file     = function(){
+  return "Nombre: " + this.name +"\n" + this.lastname + "<br>"+
                     "Edad: " + this.age + "<br>"+
                     "País: " + this.country;
   }
@@ -30,17 +30,17 @@ window.addEventListener("load", function(){
     addButton.addEventListener("click", function(event){
     event.preventDefault();
         var patient = new PatientData(inputName.value, inputLastName.value, inputAge.value, inputGender.value, inputCity.value, inputCountry.value);
-        patient.file();
 
         var allPatient = document.createElement("div")
         var pData      = document.createElement("p")
 
         allPatient.appendChild(pData);
         record.appendChild(allPatient);
+        pData.innerHTML= patient.file();
 
         all.push(patient);
 
 
       });
-      
+
 });
