@@ -35,9 +35,11 @@ window.addEventListener("load", function(){
 
     var allPatient = document.createElement("div")
     var pData     = document.createElement("p")
-    
+
     allPatient.appendChild(pData)
     record.appendChild(allPatient);
 
+    var all=[];
+    all.push(patient)
     });
 });
