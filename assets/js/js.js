@@ -39,7 +39,7 @@ window.addEventListener("load", function(){
     allPatient.appendChild(pData);
     record.appendChild(allPatient);
 
-
     all.push(patient);
+    
     });
 });
