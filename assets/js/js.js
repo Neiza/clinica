@@ -37,8 +37,7 @@ window.addEventListener("load", function(){
     var pData     = document.createElement("p")
 
     allPatient.appendChild(pData);
-    record.appendChild(allPatient);
-
+    pData.appendChild(allPatient);
 
     all.push(patient);
     });
